@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="stars">
+        <div id="stars-01"></div>
+        <div id="stars-02"></div>
+        <div id="stars-03"></div>
+    </div>
+    <div id="content">
+    </div>
+</body>
+<script>
+    var ws = new WebSocket("ws://localhost:8888")
+//     console.log(ws)
+//     ws.onopen = () => ws.send('send message from client')
+//     ws.onmessage = msg => console.log('receive message from server', msg.data)
+//    function sendMsg() {
+//        ws.send('Yo, send msg by click')
+//    }
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    // Registration was successful
+    console.log('ServiceWorker registration successful with scope: ',    registration.scope);
+  }).catch(function(err) {
+    // registration failed :(
+    console.log('ServiceWorker registration failed: ', err);
+  })
+}
+</script>
+<script src="bundle.js"></script>
+</html>
