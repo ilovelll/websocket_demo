@@ -15,7 +15,8 @@ module.exports = {
       loader: 'babel',
       exclude: [/node_modules/],
       query: {
-        presets: ['es2015', 'stage-3', 'react']
+        presets: ['stage-3', 'react'],
+        plugins: ['transform-es2015-modules-commonjs']
       }
     },
       { test: /\.css$/, loader: 'style!css' },

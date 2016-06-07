@@ -1,5 +1,5 @@
 {
-  "name": "websocket_project",
+  "name": "websocket_demo",
   "version": "0.0.1",
   "description": "A websocket project.",
   "main": "index.js",
@@ -37,6 +37,7 @@
     "iconv-lite": "^0.4.13",
     "redux-devtools": "^3.3.1",
     "style-loader": "^0.13.1",
+    "uglify-js": "github:mishoo/UglifyJS2#harmony",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.0"
   }

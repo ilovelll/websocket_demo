@@ -8,12 +8,11 @@ export default class WS {
     }
 
     sendMsg(text, type='INDEX') {
-        this.websocket.send(
-           JSON.stringify({
-               type,
-               text
-           }) 
-        )
+        let msg = JSON.stringify({
+            type,
+            text
+        })
+        setTimeout(() => this.websocket.readyState == 1?this.websocket.send(msg):sendMsg(text, type), 1000)
     }
     
     close() {
